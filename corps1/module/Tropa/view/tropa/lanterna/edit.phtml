@@ -1,0 +1,17 @@
+<?php
+$title = $this->title . ' o Lanterna Verde';
+$this->headTitle($title);
+?>
+<h1><?=$this->escapeHtml($title)?></h1>
+<?php
+$form = $this->form;
+$form->setAttribute('action', $this->url(
+                    'tropa',
+                     [
+                         'action' => 'save',
+                         'controller' => 'lanterna'
+                    ]));
+$form->prepare();
+
+echo $this->form($form);
+
