@@ -1,0 +1,40 @@
+@CHARSET "UTF-8";
+
+header {
+	background-color: white;
+	border-color: black;
+	border-style: solid;
+	color: darkgreen;
+	font-family: verdana;
+	font-weight: bold;
+	padding: 10px;
+	text-align: center;
+	width: 98%;
+}
+
+body {
+	background-color: darkmagenta;
+	color: white;
+}
+
+body a{
+	color: white;
+}
+
+footer {
+	background-color: red;
+	border-color: green;
+	border-style: solid;
+	bottom: 0%;
+	color: white;
+	font-family: verdana;
+	font-weight: bold;
+	text-align: center;
+	font-weight: bold;
+	position: absolute;
+	width: 98%;
+}
+
+input,select {
+	display: block;	
+}

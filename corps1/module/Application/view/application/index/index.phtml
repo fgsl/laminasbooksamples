@@ -1,0 +1,9 @@
+<?php
+$title = 'Cadastros ';
+$this->headTitle($title);
+?>
+<h1><?=$this->escapeHtml($title)?></h1>
+<ul>
+<li><a href="<?=$this->url('tropa',['controller'=>'lanterna'])?>">Lanternas Verdes</a></li>
+<li><a href="<?=$this->url('tropa',['controller'=>'setor'])?>">Setores Espaciais</a></li>
+</ul>

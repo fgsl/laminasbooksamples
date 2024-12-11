@@ -1,0 +1,46 @@
+<?php
+$this->headScript()->prependFile($this->basePath() . '/js/delete.js', 'text/javascript');
+$title = 'Lanternas Verdes ';
+$this->headTitle($title);
+?>
+<h1><?=$this->escapeHtml($title)?></h1>
+<p>
+    <a href="<?=$this->url(
+        'tropa',
+         [
+             'action'=>'edit',
+             'controller'=>'lanterna'
+            ]
+        )?>">Novo Lanterna Verde</a>
+</p>
+<table class="table">
+<tr>
+    <th>Código</th>
+    <th>Nome</th>
+    <th>Setor</th>
+    <th>&nbsp;</th>
+</tr>
+<?php foreach ($this->models as $model):?>
+<tr>
+    <td><?=$model->codigo?></td>
+    <td><?=$this->escapeHtml($model->nome)?></td>
+    <td><?=$this->escapeHtml($model->setor->nome)?></td>
+    <td>
+        <a href="<?=$this->url('tropa',
+            [
+                'action'=>'edit',
+                'controller'=>'lanterna',
+                'key'  => $model->codigo
+                ]
+            )?>">Editar</a>
+        <button class="delete" url="<?=$this->url('tropa',
+            [
+                'action'=>'delete',
+                'controller'=>'lanterna',
+                'key' => $model->codigo
+                ]
+            )?>">Remover</button>
+    </td>
+</tr>
+<?php endforeach ?>
+</table>

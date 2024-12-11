@@ -1,0 +1,21 @@
+<?php
+$title = $this->title . ' o setor';
+$this->headTitle($title);
+?>
+<h1><?=$this->escapeHtml($title)?></h1>
+<?php
+$form = $this->form;
+$form->setAttribute('action', $this->url(
+                    'tropa',
+                     [
+                         'action' => 'save',
+                         'controller' => 'setor'
+                    ]));
+$form->prepare();
+
+echo $this->form()->openTag($form);
+echo $this->formRow($form->get('codigo'));
+echo $this->formRow($form->get('nome'));
+echo $this->formSubmit($form->get('submit'));
+echo $this->form()->closeTag();
+
