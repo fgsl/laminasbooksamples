@@ -33,18 +33,7 @@ CREATE TABLE `lanterna` (
   `codigo_setor` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Extraindo dados da tabela `lanterna`
---
-
-INSERT INTO `lanterna` (`codigo`, `nome`, `codigo_setor`) VALUES
-(1, 'Rot Lop Fan', 911),
-(2, 'Sinestro', 1417),
-(3, 'Mogo', 2261),
-(4, 'Hal Jordan', 2814);
-
 -- --------------------------------------------------------
-
 --
 -- Estrutura da tabela `setor`
 --
@@ -53,17 +42,6 @@ CREATE TABLE `setor` (
   `codigo` int(11) NOT NULL,
   `nome` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Extraindo dados da tabela `setor`
---
-
-INSERT INTO `setor` (`codigo`, `nome`) VALUES
-(911, 'Profundezas Obsidianas'),
-(1417, 'Korugar'),
-(2261, 'Mogo'),
-(2814, 'Terra'),
-(3182, 'Daxam');
 
 --
 -- Índices para tabelas despejadas
@@ -89,7 +67,7 @@ ALTER TABLE `setor`
 -- AUTO_INCREMENT de tabela `lanterna`
 --
 ALTER TABLE `lanterna`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
